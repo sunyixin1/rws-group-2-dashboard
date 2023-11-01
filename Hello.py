@@ -1,22 +1,27 @@
 import streamlit as st
-from PIL import Image
-tab1, tab2 = st.tabs(["Data Cleaning", "Nearest Node"])
-with tab1:
-    st.header("Data Cleaning")
-    st.markdown("In this section, we will introduce the steps and methods of data cleaning.")
-    st.subheader("Details of Data Cleaning")
-    st.markdown("HTML Content:123", unsafe_allow_html=True)
-    with open("map123.html", "r", encoding="utf-8") as f:
-        map1_html = f.read()
-        st.components.v1.html(map1_html, height=300)
-    st.markdown("More information about data cleaning.")
 
-with tab2:
-    st.header("Data washing")
-    st.markdown("In this section, we will introduce the steps and methods of data cleaning.")
-    st.subheader("Details of Data Cleaning")
-    st.markdown("HTML Content:123", unsafe_allow_html=True)
-    with open("map123.html", "r", encoding="utf-8") as f:
-        map1_html = f.read()
-        st.components.v1.html(map1_html, height=300)
-    st.markdown("More information about data cleaning.")
+# 在标题上方加载图片
+st.image('Graph/inspector.webp')  # 确保图片路径是正确的
+
+# 使用Markdown和CSS来居中主标题
+st.markdown(
+    """
+    <h1 style="text-align:center;">Rijkwaterstraat project Group 2</h1>
+    """,
+    unsafe_allow_html=True
+)
+
+# 显示5行副标题，每行是一个人的名字和学号，并使用Markdown和CSS来居中
+names_and_ids = [
+    ("Heisuke Miyoshi", "5733693"),
+    ("Klaas Sicking", "4948416"),
+    ("Martijn Stok", "5070740"),
+    ("Martin van Andel", "4577566"),
+    ("Sun Yixin", "5715210")
+]
+
+for name, stud_id in names_and_ids:
+    st.markdown(
+        f"<h2 style='text-align:center;'>{name} - {stud_id}</h2>",
+        unsafe_allow_html=True
+    )
