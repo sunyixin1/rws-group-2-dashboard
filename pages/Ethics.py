@@ -1,0 +1,21 @@
+import streamlit as st
+
+# Add headers and markdowns to structure the provided text
+st.title("Ethical Considerations")
+
+st.header("1.Privacy")
+st.write("""
+The first concern with privacy comes with the recording of the incidents on the road into the database. It is logical that people who are involved in an accident or something similar would not want to have data recorded which could be traced back to them. However, such data could perhaps provide valuable insights while developing the algorithm. The data provided for this project is all anonymized, so this is not an issue for us. The second issue with privacy concerns the road inspectors. In the project description provided by RWS it states that colleagues can now always see the location of each road inspector. This is of course sensitive information and should be treated as such. Measures should be taken to ensure that this information is only used for appropriate purposes, such as to check which road inspector is closest to the location of the incident.
+""")
+
+st.header("2.Bias")
+st.write("""
+There are some biases which could influence the validity of the algorithm. One of these is the limitations in the database which was provided. This includes many recorded incidents, but only in the months from August to December. It is possible that the probability of an incident happening on a certain section of the road network is dependent on the season and associated weather. An example of this would be a higher likelihood of incidents happening in foggy or snowy weather in the winter. An ideal database would include such data from multiple years so a more accurate calculation of the locations of the road inspectors can be done. Because we do not have the database for the whole year, our algorithm could over- or underestimate the probability of an incident happening on certain road sections. Another bias is that the database only contains incidents which happened on the highways. Of course, incidents can happen on other roads, such as N-roads, and road inspectors could be sent there to determine what the exact situation is. But because these incidents are not recorded we have no way of taking them into account. This could introduce a bias in our algorithm against placing road inspectors close to roads which are not highways.
+""")
+
+st.header("3.Fairness")
+st.write("""
+In the algorithm that is currently being developed, there is no weight attached to the incidents, meaning that each incident has an equal effect on the distribution of the road inspectors over the network. At first this sounds fair, until one considers that not all incidents are of equal importance. For example, a life-threatening accident could be considered of higher importance than an object spotted on the side of the road. Therefore, the accident could have a higher weight attached to it, to make sure that road inspectors will arrive quickly on the scene. But in order to do this, the database would have to contain significantly more details on the exact type of incident that occurred, which leads back to the previously mentioned privacy concern. This makes it very difficult to develop a solution that satisfies all ethical considerations.
+
+Fairness also plays a role in the evaluation of the effectiveness of the algorithm. Currently, only the average response time is measured to determine where the road inspectors should be located. This could lead to large response times in more rural areas since most incidents happen where the majority of people live, in the Netherlands that is the Randstad. So, a large response time in a rural region could be compensated with fast response times in the Randstad. People who live in more rural areas could perceive this as unfair since they have to wait longer. A solution to this could be to just spread out road inspectors evenly over the whole country so everyone is equally far away from a road inspector. However, a consequence of this could be that road inspectors in the Randstad are overwhelmed with reports of incidents while road inspectors in rural regions have little to do, making the system function ineffectively. This makes it very difficult to define what a fair solution is to everyone.
+""")
