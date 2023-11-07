@@ -36,9 +36,9 @@ N = tab1_intro.slider("Number of inscpectors", min_value=100, max_value=120, ste
 tab1_intro.write("Optimal locations for road inspectors when there are {} road inspectors".format(N))
 tab1_intro.markdown("\n")
 # MAP WITH LOCATION COME HERE
-dict_loc = {100: open("maps\location_100.html", "r", encoding="utf-8").read(), 
-            110: open("maps\location_110.html", "r", encoding="utf-8").read(), 
-            120: open("maps\location_100.html", "r", encoding="utf-8").read()}
+dict_loc = {100: open("maps/location_100.html", "r", encoding="utf-8").read(), 
+            110: open("maps/location_110.html", "r", encoding="utf-8").read(), 
+            120: open("maps/location_100.html", "r", encoding="utf-8").read()}
 tab1_intro._html(dict_loc[N], height=600, scrolling=True)
 
 tab1_intro.markdown("As an example, the matching of the solutions of road inspectors' locations and random days are shown below. The first figure shows the locations of the road inspectors and the incidents on a random day. \
@@ -47,15 +47,15 @@ tab1_intro.markdown("\n")
 N2 = tab1_intro.slider("Number of inscpectors ", min_value=100, max_value=120, step=10)
 days = tab1_intro.selectbox("Days", ["2019-08-02", "2019-09-16", "2019-10-03"])
 # MAP WITH LOCATION AND INCIDENTS COME HERE
-dict_match = {100: {"2019-08-02": open("maps\matching_2019-08-02_100.html", "r", encoding="utf-8").read(),
-                    "2019-09-16": open("maps\matching_2019-09-16_100.html", "r", encoding="utf-8").read(),
-                    "2019-10-03": open("maps\matching_2019-10-03_100.html", "r", encoding="utf-8").read()},
-              110: {"2019-08-02": open("maps\matching_2019-08-02_110.html", "r", encoding="utf-8").read(),
-                    "2019-09-16": open("maps\matching_2019-09-16_110.html", "r", encoding="utf-8").read(),
-                    "2019-10-03": open("maps\matching_2019-10-03_110.html", "r", encoding="utf-8").read()},
-              120: {"2019-08-02": open("maps\matching_2019-08-02_120.html", "r", encoding="utf-8").read(),
-                    "2019-09-16": open("maps\matching_2019-09-16_120.html", "r", encoding="utf-8").read(),
-                    "2019-10-03": open("maps\matching_2019-10-03_120.html", "r", encoding="utf-8").read()}}
+dict_match = {100: {"2019-08-02": open("maps/matching_2019-08-02_100.html", "r", encoding="utf-8").read(),
+                    "2019-09-16": open("maps/matching_2019-09-16_100.html", "r", encoding="utf-8").read(),
+                    "2019-10-03": open("maps/matching_2019-10-03_100.html", "r", encoding="utf-8").read()},
+              110: {"2019-08-02": open("maps/atching_2019-08-02_110.html", "r", encoding="utf-8").read(),
+                    "2019-09-16": open("maps/matching_2019-09-16_110.html", "r", encoding="utf-8").read(),
+                    "2019-10-03": open("maps/matching_2019-10-03_110.html", "r", encoding="utf-8").read()},
+              120: {"2019-08-02": open("maps/matching_2019-08-02_120.html", "r", encoding="utf-8").read(),
+                    "2019-09-16": open("maps/matching_2019-09-16_120.html", "r", encoding="utf-8").read(),
+                    "2019-10-03": open("maps/matching_2019-10-03_120.html", "r", encoding="utf-8").read()}}
 tab1_intro._html(dict_match[N2][days], height=600, scrolling=True)
 tab1_intro.markdown("\n")
 tab1_intro.markdown("The boxplot and histrogram below show the distribution of the response times of the road inspectors \
