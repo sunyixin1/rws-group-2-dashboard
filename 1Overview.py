@@ -50,7 +50,7 @@ days = tab1_intro.selectbox("Days", ["2019-08-02", "2019-09-16", "2019-10-03"])
 dict_match = {100: {"2019-08-02": open("maps/matching_2019-08-02_100.html", "r", encoding="utf-8").read(),
                     "2019-09-16": open("maps/matching_2019-09-16_100.html", "r", encoding="utf-8").read(),
                     "2019-10-03": open("maps/matching_2019-10-03_100.html", "r", encoding="utf-8").read()},
-              110: {"2019-08-02": open("maps/atching_2019-08-02_110.html", "r", encoding="utf-8").read(),
+              110: {"2019-08-02": open("maps/matching_2019-08-02_110.html", "r", encoding="utf-8").read(),
                     "2019-09-16": open("maps/matching_2019-09-16_110.html", "r", encoding="utf-8").read(),
                     "2019-10-03": open("maps/matching_2019-10-03_110.html", "r", encoding="utf-8").read()},
               120: {"2019-08-02": open("maps/matching_2019-08-02_120.html", "r", encoding="utf-8").read(),
